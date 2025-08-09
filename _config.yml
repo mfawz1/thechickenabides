@@ -7,4 +7,4 @@ author: mfawz1
 description: tech blog?
 baseurl: thechickenabides/
 url: "mfawz1.github.io"
-permalink: /:title
+permalink: :title
