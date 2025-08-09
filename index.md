@@ -9,7 +9,7 @@ title: The Chicken Abides
 <ul>
   {% for post in site.posts %}
     <li>
-      <a href="/thechickenabides{{ post.url }}">{{ post.title }} {{ post.date }}</a>
+      <a href="/thechickenabides{{ post.url }}">{{ post.title }} {{ post.date | date: "%a, %b %d, %Y"}}</a>
     </li>
   {% endfor %}
 </ul>
