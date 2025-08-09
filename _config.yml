@@ -5,3 +5,6 @@ plugins:
 title: the chicken abides
 author: mfawz1
 description: tech blog?
+baseUrl: ""
+url: "mfawz1.github.io"
+permalink: /:title
