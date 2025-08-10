@@ -1,6 +1,6 @@
 ---
-title: "Unreal Engine C++ LSP integration with compile_commands.json"
-date: 2025-08-09
+title: "Unreal Engine C++ LSP integration with compile_commands.json using bash"
+date: 2025-08-10
 tags: 
 - UnrealEngine
 - C++
