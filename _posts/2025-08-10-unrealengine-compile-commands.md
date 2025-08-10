@@ -1,6 +1,11 @@
 ---
 title: "Unreal Engine C++ LSP integration with compile_commands.json"
 date: 2025-08-09
+tags: 
+- UnrealEngine
+- C++
+- neovim
+- bash
 ---
 
 ## Quick Breakdown
@@ -40,10 +45,9 @@ UnrealCompileCommandsCoroutine () {
 }
 ```
 1. The code above requires you to have `jq` installed, so it can lookup the Modules list within the `*.uproject` file
-2. The code also requires you set up a special environment variable $UNREAL_PATH
+2. The code also requires you set up a special environment variable `$UNREAL_PATH`
     which you need to set before execution or within your .bashrc(depends on your terminal emulator if you're using something other than bash your probably know this already)
-   or you can simply do ```bash 
-   UNREAL_PATH=/path/to/unrealengine/folder UnrealCompileCommands```
+   or you can simply do `UNREAL_PATH=/path/to/unrealengine/folder UnrealCompileCommands`
 
 ## Usage: `UnrealCompileCommands` or `UnrealCompileCommands /path/to/uproject/file`
 - By default the function will assume it's within a `Source` Directory and a `*.uproject` file is one level up(this might not be the case for you using this)
