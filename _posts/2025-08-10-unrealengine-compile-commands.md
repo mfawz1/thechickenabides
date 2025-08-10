@@ -7,6 +7,7 @@ tags:
 - neovim
 - bash
 description: "Generating compile_commands.json for Unreal Engine on Linux to integrate with Neovim"
+image: /assets/images/unreal-engine-lsp-example.png
 ---
 <img src="./assets/images/unreal-engine-lsp-example.png" />
 ## Quick Breakdown
