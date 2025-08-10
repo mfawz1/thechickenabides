@@ -6,8 +6,9 @@ tags:
 - C++
 - neovim
 - bash
+description: "Generating compile_commands.json for Unreal Engine on Linux to integrate with Neovim"
 ---
-
+<img src="./assets/images/unreal-engine-lsp-example.png" />
 ## Quick Breakdown
 _when writing c++ for unreal engine, you often want to use your own trusty neovim for the job, why? no particular reason_
 
