@@ -44,11 +44,15 @@ UnrealCompileCommandsCoroutine () {
     echo "UNREAL_PATH is not set, please include it in your .bashrc"
 }
 ```
-1. The code above requires you to have `jq` installed, so it can lookup the Modules list within the `*.uproject` file
-2. The code also requires you set up a special environment variable `$UNREAL_PATH`
+1. The code above assumes you're using linux
+2. The code above requires you to have `jq` installed, so it can lookup the Modules list within the `*.uproject` file
+3. The code also requires you set up a special environment variable `$UNREAL_PATH`
     which you need to set before execution or within your .bashrc(depends on your terminal emulator if you're using something other than bash your probably know this already)
    or you can simply do `UNREAL_PATH=/path/to/unrealengine/folder UnrealCompileCommands`
 
 ## Usage: `UnrealCompileCommands` or `UnrealCompileCommands /path/to/uproject/file`
 - By default the function will assume it's within a `Source` Directory and a `*.uproject` file is one level up(this might not be the case for you using this)
 - It will also attempt to get the first Module name within the `*.uproject` file(this also might not be the desired behavior you can adjust this accordingly)
+- If you're not on Linux, you would need to edit this line 
+  ```"${UNREAL_PATH%/*}/Engine/Build/BatchFiles/Linux/Build.sh" -mode=GenerateClangDatabase -project=$1 -game -engine $(cat $1 | jq '.Modules[0].Name' | tr -d '"') Development Linux````
+  to provide the path of your operating system, and provide your OS name to the `Build.sh` command
