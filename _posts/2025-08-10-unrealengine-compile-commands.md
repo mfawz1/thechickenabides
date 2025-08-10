@@ -55,5 +55,5 @@ UnrealCompileCommandsCoroutine () {
 - By default the function will assume it's within a `Source` Directory and a `*.uproject` file is one level up(this might not be the case for you using this)
 - It will also attempt to get the first Module name within the `*.uproject` file(this also might not be the desired behavior you can adjust this accordingly)
 - If you're not on Linux, you would need to edit this line 
-  ```"${UNREAL_PATH%/*}/Engine/Build/BatchFiles/Linux/Build.sh" -mode=GenerateClangDatabase -project=$1 -game -engine $(cat $1 | jq '.Modules[0].Name' | tr -d '"') Development Linux````
+  `"${UNREAL_PATH%/*}/Engine/Build/BatchFiles/Linux/Build.sh" -mode=GenerateClangDatabase -project=$1 -game -engine $(cat $1 | jq '.Modules[0].Name' | tr -d '"') Development Linux`
   to provide the path of your operating system, and provide your OS name to the `Build.sh` command
